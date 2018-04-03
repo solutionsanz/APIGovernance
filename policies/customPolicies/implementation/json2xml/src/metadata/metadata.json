@@ -1,0 +1,45 @@
+{
+   "type": "o:Json2Xml",
+   "name": "JSON 2 XML",
+   "version": "1.1",
+   "revision": "2",
+   "schemaVersion": "1",
+   "sdkVersion": "3.0",
+   "category": "@implementations.policyCategory.other",
+   "description": "policy.description",
+   "constraints": {
+      "direction": "REQUEST_OR_RESPONSE",
+      "requestZone": "30,40,50",
+      "responseZone": "150",
+      "singleton": false
+   },
+   "ui": {
+      "edit": {
+         "html": "json2xml-edit.html",
+         "js": "json2xml-edit.js",
+         "helpInfo": "#helpInfo",
+         "helpUrl": "http://www.oracle.com",
+         "helpTopicId": "policies.json2xml"
+      },
+      "view": {
+         "html": "json2xml-view.html",
+         "js": "json2xml-view.js",
+         "helpInfo": "#helpInfo",
+         "helpUrl": "http://www.oracle.com",
+         "helpTopicId": "policies.json2xml"
+      },
+      "l10nbundle": "L10n/json2xml.json"
+   },
+   "configuration": {
+      "services": [
+         {
+            "type": "oracle.apiplatform.policies.sdk.validation.PolicyValidator",
+            "service": "oracle.apiplatform.policies.json2xml.Json2XmlValidator"
+         },
+         {
+            "type": "oracle.apiplatform.policies.sdk.runtime.PolicyRuntimeFactory",
+            "service": "oracle.apiplatform.policies.json2xml.Json2XmlRuntimeFactory"
+         }
+      ]
+   }
+}

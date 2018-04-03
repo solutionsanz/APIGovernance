@@ -1,0 +1,15 @@
+policyName=json2xml
+jarPrefix=oracle.apiplatform.policies
+policy-sdk=../../policy-sdk
+
+autoRevision=false
+autoDeploy=true
+
+### If either 'autoRevision' or 'autoDeploy'
+### properties are set to 'true', then the
+### properties below must be set as well.
+
+mgmtServerHost=
+mgmtServerPort=
+mgmtServerUser=
+mgmtServerPass=

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/config/java"/>
+	<classpathentry kind="src" path="src/runtime/java"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/com.bea.core.utils.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/com.sun.mail.javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/commons-configuration-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/groovy-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/javax.servlet.javax.servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/json-20160212.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/net.minidev.json-smart.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/nimbus-jose-jwt-4.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/oracle.apiplatform.policies.sdk.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/oracle.apiplatform.shared.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/oracle.apiplatform.utils.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/oracle.sdp.daf-6.1.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/oracle.sdp.registration.prs_6.1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/wlng.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/wls-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aknight/Documents/SPAR/policy-SDK/xmlparserv2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
