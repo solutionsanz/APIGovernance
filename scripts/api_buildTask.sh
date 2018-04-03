@@ -62,7 +62,7 @@ sed -i "s/@API_DESC@/${API_DESC}/g" apiBody.json
 # Calling POST to create new API:
 ####
 
-curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -X POST -H "Content-Type: application/json" -d @apiBody.json "${APIPCS_LOCATION}/apiplatform/management/v1/apis/" -v > out
+curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -k -X POST -H "Content-Type: application/json" -d @apiBody.json "${APIPCS_LOCATION}/apiplatform/management/v1/apis/" -v > out
 
 ####
 # Extracting API ID from response:
@@ -77,7 +77,7 @@ export API_ID=`sed "s/\"//g" out | awk -F, '{print $1}' | awk -F: '{print $2}'`
 # Calling PUT to set API state to RELEASED:
 ####
 
-curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -X PUT -H "Content-Type: application/json" -d '{"state": "RELEASED","stateComments": "API Released"}' "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/state" -v
+curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -k -X PUT -H "Content-Type: application/json" -d '{"state": "RELEASED","stateComments": "API Released"}' "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/state" -v
 
 
 #4) Update API Identity:
@@ -96,7 +96,7 @@ sed -i "s/@API_VERSION@/${API_VERSION}/g" apiIdBody.json
 # Calling PUT to set API identity:
 ####
 
-curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -X PUT -H "Content-Type: application/json" -d @apiIdBody.json "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/identity" -v
+curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -k -X PUT -H "Content-Type: application/json" -d @apiIdBody.json "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/identity" -v
 
 
 #5) Publish API to Development Portal:
@@ -105,7 +105,7 @@ curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -X PUT -H "Content-Type: applicati
 # Calling PUT to publish API to Developers Portal:
 ####
 
-curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -X PUT -H "Content-Type: application/json" -d '{"state":"PUBLISHED"}' "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/publication" -v
+curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -k -X PUT -H "Content-Type: application/json" -d '{"state":"PUBLISHED"}' "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/publication" -v
 
 
 #6) Deploy API to API Gateway:
@@ -121,7 +121,7 @@ sed -i "s/@API_GW_ID@/${API_GW_ID}/g" apiDeploymentBody.json
 # Calling POST to deploy API to configured API Gateway:
 ####
 
-curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -X POST -H "Content-Type: application/json" -d @apiDeploymentBody.json "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/deployments" -v
+curl -u "${APIPCS_USERNAME}:${APIPCS_PASSWD}" -k -X POST -H "Content-Type: application/json" -d @apiDeploymentBody.json "${APIPCS_LOCATION}/apiplatform/management/v1/apis/${API_ID}/deployments" -v
 
 
 
