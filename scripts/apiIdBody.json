@@ -1,5 +1,5 @@
 {
-  "name": "@API_NAME@",
-  "vanityName": "@API_NAME@",
-  "version": "@API_VERSION@"
+  "name": "Dev_APIs4SystemOfRecords",
+  "vanityName": "Dev_APIs4SystemOfRecords",
+  "version": "2.1.1"
 }

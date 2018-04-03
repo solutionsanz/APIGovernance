@@ -1,10 +1,12 @@
 {
+  "vanityName": "@API_NAME@",
+  "updatedBy": "weblogic",
   "implementation": {
     "executions": {
       "request": [
         "1",
-        "6",
         "5",
+        "6",
         "2"
       ],
       "response": [
@@ -14,18 +16,21 @@
     },
     "policies": [
       {
+        "schemaVersion": "1",
         "draft": false,
         "id": "1",
         "type": "o:ApiRequest",
         "version": "1.0",
         "config": {
           "protocols": [
-            "HTTP"
+            "HTTP",
+            "HTTPS"
           ],
           "url": "@API_URI@"
         }
       },
       {
+        "schemaVersion": "3",
         "draft": false,
         "id": "2",
         "type": "o:ServiceRequest",
@@ -36,21 +41,36 @@
         }
       },
       {
+        "schemaVersion": "1",
         "id": "3",
         "type": "o:ServiceResponse",
         "version": "1.0",
         "config": {}
       },
       {
+        "schemaVersion": "1",
         "id": "4",
         "type": "o:ApiResponse",
         "version": "1.0",
         "config": {}
       },
       {
+        "schemaVersion": "1",
         "comments": "",
         "draft": false,
         "id": "5",
+        "type": "o:KeyValidation",
+        "version": "1.0",
+        "config": {
+          "keysource": "HEADER",
+          "keyheader": "x-api-key"
+        }
+      },
+      {
+        "schemaVersion": "1",
+        "comments": "",
+        "draft": false,
+        "id": "6",
         "type": "o:HeaderValidation",
         "version": "1.0",
         "config": {
@@ -64,29 +84,25 @@
             }
           ]
         }
-      },
-      {
-        "comments": "",
-        "draft": false,
-        "id": "6",
-        "type": "o:KeyValidation",
-        "version": "1.0",
-        "config": {
-          "keysource": "HEADER",
-          "keyheader": "X-My-Api-Key"
-        }
       }
     ]
   },
-  "version": "1.0", 
+  "description": "This is a template for PAI body",
+  "version": "1.0",
+  "createdAt": "2018-04-03T07:11:56+0000",
+  "createdBy": "weblogic",
   "publication": {
-    "portalUrl": "http://apics.oracle.com:7201/developers/apis/@API_URI@",
-    "state": "PUBLISHED",
-    "iterationId": "1",
+    "stateUpdatedAt": "2018-04-03T07:36:05+0000",
+    "visibility": "PROTECTED",
+    "portalUrl": "https://129.156.112.180:443/developers/apis/@API_NAME@",
+    "iterationId": "2",
+    "stateUpdatedBy": "weblogic"
   },
   "name": "@API_NAME@",
-  "details": {
-    "description": "@API_DESC@"
-  },
-  "state": "RELEASED"
+  "details": {},
+  "state": "ALPHA",
+  "id": "110",
+  "iterationId": "2",
+  "updatedAt": "2018-04-03T07:36:05+0000",
+  "artifacts": []
 }
