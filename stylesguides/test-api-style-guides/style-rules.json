@@ -1,0 +1,32 @@
+[
+  {
+    "ruleName": "ensurePluralCollections",
+    "functionName": "validateURICollectionsArePlural",
+    "target": "Resource_URI_Template",
+    "intent": "Collections used in API definitions should be plurals by convention"
+  },
+  {
+    "ruleName": "ensureURIParametersAreCamel",
+    "functionName": "validateURIVariablesAreCamelCase",
+    "target": "Resource_URI_Template",
+    "intent": "URI Parameters should be Camel Case for consistancy"
+  },
+  {
+    "ruleName": "ensureBodyOnlySentOnPutPostPatch",
+    "functionName": "validateRequestBodyForMethod",
+    "target": "Action",
+    "intent": "Request bodies should only be sent on POST, PUT and PATCH (since the other ones break with Apache)"
+  },
+  {
+    "ruleName": "ensureRequestBodyAttributesAreCamel",
+    "functionName": "validateBodyAttributesAreCamelCase",
+    "target": "Request_Body",
+    "intent": "Request Bodies should use camel cased attribute names"
+  },
+  {
+    "ruleName": "ensureResponseBodyAttributesAreCamel",
+    "functionName": "validateBodyAttributesAreCamelCase",
+    "target": "Response_Body",
+    "intent": "Response Bodies should use camel cased attribute names"
+  }
+]

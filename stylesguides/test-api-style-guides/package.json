@@ -1,0 +1,18 @@
+{
+  "name": "test-api-style-guides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "style-assertions.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "minim": "^0.20.4",
+    "minim-api-description": "^0.8.0",
+    "mocha": "^5.0.5"
+  }
+}
