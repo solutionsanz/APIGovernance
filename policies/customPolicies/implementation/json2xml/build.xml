@@ -141,6 +141,34 @@
 					echo.setMessage(endpoint);
 					echo.perform();
 
+					//***** BEGIN DISABLING ALL SSL SECURITY - SERENE *****
+					// Create a trust manager that does not validate certificate chains
+					var X509TrustManager = Java.type("javax.net.ssl.X509TrustManager");
+					var permissiveTrustManager = Java.extend(X509TrustManager,
+					{
+							getAcceptedIssuers: function(){return null;},
+							checkClientTrusted: function(certs, authType){return;},
+							checkServerTrusted: function(certs, authType){return;}
+					});
+
+					trustAllCerts = [new permissiveTrustManager()];
+
+					// Install the all-trusting trust manager
+					var sc = javax.net.ssl.SSLContext.getInstance("SSL");
+					sc.init(null, trustAllCerts, new java.security.SecureRandom());
+					javax.net.ssl.HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
+					// Create all-trusting host name verifier
+					var HostnameVerifier = Java.type("javax.net.ssl.HostnameVerifier");
+					var allHostsValid = Java.extend(HostnameVerifier,
+					{
+							verify: function(hostname,session){return true;}
+					});
+
+					// Install the all-trusting host verifier
+					javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(new allHostsValid());
+					//***** ALL SSL SECURITY DISABLED - SERENE *****
+
 					url = new java.net.URL(endpoint);
 					urlConn = url.openConnection();
 					userPass = mgmtServerUser + ":" + mgmtServerPass;

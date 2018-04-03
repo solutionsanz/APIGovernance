@@ -2,7 +2,7 @@
    "type": "o:Json2Xml",
    "name": "JSON 2 XML",
    "version": "1.1",
-   "revision": "2",
+   "revision": "3",
    "schemaVersion": "1",
    "sdkVersion": "3.0",
    "category": "@implementations.policyCategory.other",

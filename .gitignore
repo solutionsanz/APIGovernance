@@ -1,2 +1,6 @@
 .DS_Store
 build.properties
+/bin
+package-lock.json
+setEnv.sh
+/node_modules
