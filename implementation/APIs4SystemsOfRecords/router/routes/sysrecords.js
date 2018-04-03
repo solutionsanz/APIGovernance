@@ -31,7 +31,8 @@ module.exports = function (app) {
     /* GET Records by Query Parameter */
     app.get('/records', function (req, res) {
 
-        var appKey = req.get("x-api-key");
+        // var appKey = req.get("x-api-key");
+        var appKey = "test";
         var collectionName = req.query.collectionName;
 
         console.log("x-api-key used is [" + appKey + "], collectionName is [" + collectionName + "]");
@@ -127,7 +128,8 @@ module.exports = function (app) {
     /* POST records */
     app.post('/records', function (req, res) {
 
-        var appKey = req.get("x-api-key");
+        // var appKey = req.get("x-api-key");
+        var appKey = "test";
         var collectionName = req.body.CollectionName;
 
         console.log("x-api-key used is [" + appKey + "], collectionName is [" + collectionName + "]");
@@ -203,7 +205,8 @@ module.exports = function (app) {
     /* Delete Record by Id(s) */
     app.delete('/records/:id', function (req, res) {
 
-        var appKey = req.get("x-api-key");
+        // var appKey = req.get("x-api-key");
+        var appKey = "test";
         var collectionName = req.query.collectionName;
         var currId = req.params.id;
 
