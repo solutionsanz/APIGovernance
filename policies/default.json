@@ -1,0 +1,33 @@
+{
+  "policies": [
+    {
+      "comments": "",
+      "draft": false,
+      "id": "5",
+      "type": "o:HeaderValidation",
+      "version": "1.0",
+      "config": {
+        "conjunction": "ANY",
+        "action": "REJECT",
+        "conditions": [
+          {
+            "headerName": "SHOULD_WORK",
+            "headerValue": "true",
+            "operator": "!="
+          }
+        ]
+      }
+    },
+    {
+      "comments": "",
+      "draft": false,
+      "id": "6",
+      "type": "o:KeyValidation",
+      "version": "1.0",
+      "config": {
+        "keysource": "HEADER",
+        "keyheader": "X-My-Api-Key"
+      }
+    }
+  ]
+}

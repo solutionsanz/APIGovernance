@@ -11,7 +11,7 @@
 
 
 
-#1) Get API template in case you don;'t have it yet:
+#1) Get API template in case you don't have it yet:
 #curl -i -X GET -u ${APIPCS_USERNAME}:${APIPCS_PASSWD}" "${APIPCS_LOCATION}/apiplatform/management/v1/apis/{API_ID}" -v
 
 #2) POST Create a new API
@@ -25,16 +25,16 @@
 #
 ####
 
-export APIPCS_USERNAME=''
-export APIPCS_PASSWD=''
-export APIPCS_LOCATION=''
+#export APIPCS_USERNAME=''
+#export APIPCS_PASSWD=''
+#export APIPCS_LOCATION=''
 
-export API_NAME=''
-export API_VERSION=''
-export API_URI=''
-export API_GW_ID=''
-export INTERNAL_API=''
-export API_DESC=''
+#export API_NAME=''
+#export API_VERSION=''
+#export API_URI=''
+#export API_GW_ID=''
+#export INTERNAL_API=''
+#export API_DESC=''
 
 ####
 # Fork apiBody.json from template
