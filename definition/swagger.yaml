@@ -20,8 +20,8 @@ tags:
     description: "Find out more"
     url: "http://apismadeeasy.cloud"
 schemes:
-- "https"
-#- "http"
+#- "https"
+- "http"
 security:
   - X-MyAPI-Key: []
 paths:
