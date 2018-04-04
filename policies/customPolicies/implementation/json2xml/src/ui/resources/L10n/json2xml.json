@@ -1,7 +1,7 @@
 {
     "l10nBundle" : {
         "policy.name"             : "Json2Xml",
-        "policy.description"      : "Test with autodeploy",
+        "policy.description"      : "Testing for API Governance",
         "#helpInfo"               : "Complete all fields. Comments are optional.",
         "label.field.header"      : "Input Document",
         "label.condition.phrase"  : "Pass the request/response if the message is transformed successfully. Errors and rejections are handled as exceptions."

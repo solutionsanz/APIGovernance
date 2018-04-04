@@ -1,7 +1,7 @@
 reporter: apiary
 custom:
-  apiaryApiKey: 8acaf08faf1def68262d02ea44bc2109
-  apiaryApiName: api4sysrecords
+  apiaryApiKey: 6ec2cc61b66f120a21606073f7d8cc85
+  apiaryApiName: apis4governance
 dry-run: null
 hookfiles: null
 language: nodejs

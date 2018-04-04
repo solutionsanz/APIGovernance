@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   description: "This project provides a platform to easily read and write data coming from agnostic systems of records. Behind the scenes we can switch to any Application, such as Salesforce, Oracle SalesCloud, Service Cloud, ERP Cloud, etc. Examples of these type of ICS-based SaaS Integrations can be found here: https://github.com/solutionsanz/PaaS4SaaS"
   version: "2.1"
-  title: "APIs 4 Systems of Records"
+  title: "APIs 4 Governance"
   #termsOfService: "http://apismadeeasy.cloud/terms"
   contact:
     email: "carlos.rodriguez.iturria@oracle.com"
@@ -20,8 +20,8 @@ tags:
     description: "Find out more"
     url: "http://apismadeeasy.cloud"
 schemes:
-- "https"
-#- "http"
+#- "https"
+- "http"
 security:
   - X-MyAPI-Key: []
 paths:
